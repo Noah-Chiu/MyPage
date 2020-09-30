@@ -35,7 +35,7 @@ svg {
     color: #000000CC;
     z-index: 2;
 }
-.nav{
+.navbar{
     margin: auto;
     margin-left: 0;
     display: flex;
@@ -46,48 +46,43 @@ svg {
     border-radius: 30px;
     padding: 0;
 }
-ul li{
+.navbar li{
     display: inline-block;
     list-style: none;
     margin : auto;
 }
-ul li a {
+.navbar li a {
     margin : auto;
     font-size: 1.2em;
     color: #ffffff;
     text-decoration: none;
+    z-index: 2;
 }
 
 nav .animation{
     position: absolute;
     height: 100%;
     z-index: 0;
-    display: none;
     background: rgb(0,0,0,0.3);
     border-radius: 30px;
 }
 ul li:nth-child(1):hover~.animation{
-    display: block;
     width: 21%;
     left: 0%;
 }
 ul li:nth-child(2):hover~.animation{
-    display: block;
-    width: 17%;
+    width: 17.5%;
     left: 21%;
 }
 ul li:nth-child(3):hover~.animation{
-    display: block;
-    width: 21.5%;
-    left: 38%;
+    width: 21%;
+    left: 38.5%;
 }
 ul li:nth-child(4):hover~.animation{
-    display: block;
     width: 20.5%;
     left: 59.5%;
 }
 ul li:nth-child(5):hover~.animation{
-    display: block;
     width: 20%;
     left: 80%;
 }
