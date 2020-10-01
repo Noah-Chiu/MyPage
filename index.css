@@ -47,9 +47,14 @@ svg {
     padding: 0;
 }
 .navbar li{
-    display: inline-block;
+    box-sizing: content-box;
+    height: 4rem;
+    width: 20%;
+    display: flex;
     list-style: none;
     margin : auto;
+    border-radius: 30px;
+    align-items: center;
 }
 .navbar li a {
     margin : auto;
@@ -57,6 +62,7 @@ svg {
     color: #ffffff;
     text-decoration: none;
     z-index: 2;
+    border-radius: 30px;
 }
 
 nav .animation{
@@ -66,25 +72,11 @@ nav .animation{
     background: rgb(0,0,0,0.3);
     border-radius: 30px;
 }
-ul li:nth-child(1):hover~.animation{
-    width: 21%;
-    left: 0%;
+#active{
+    background-color: rgba(0, 0, 0, 0.3);
 }
-ul li:nth-child(2):hover~.animation{
-    width: 17.5%;
-    left: 21%;
-}
-ul li:nth-child(3):hover~.animation{
-    width: 21%;
-    left: 38.5%;
-}
-ul li:nth-child(4):hover~.animation{
-    width: 20.5%;
-    left: 59.5%;
-}
-ul li:nth-child(5):hover~.animation{
-    width: 20%;
-    left: 80%;
+.navbar li:hover{
+    background-color: rgb(0,0,0,0.1);
 }
 body{
     margin: auto;
@@ -126,7 +118,7 @@ section {
     align-items: center;
     justify-items: center;
     box-shadow: 8px 5px rgba(0, 0, 0, 0.164);
-    background-color: rgba(0, 0, 0, 0.473);
+    background-color:#59627540;
 }
 .skill > .items {
     font-size: 1.5em;
@@ -140,4 +132,78 @@ footer {
     margin: 0;
     width: 100%;
     background-color: #000000cc;
+}
+.contact ul {
+display: flex;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+.contact ul li {
+list-style: none;
+}
+
+.contact ul li a {
+width: 16rem;
+height: 16rem;
+background-color: rgba(0, 0, 0, 0);
+text-align: center;
+line-height: 80px;
+font-size: 6em;
+margin: 0 60px;
+display: flex;
+align-items: center;
+justify-content: center;
+text-decoration: none;
+border-radius: 20%;
+position: relative;
+overflow: hidden;
+border: 3px solid rgba(0, 0, 0, 0.25);
+z-index: 1;
+}
+
+.contact ul li a .icon {
+position: relative;
+color: #00000050;
+transition: .35s 0.15s;
+z-index: 3;
+}
+
+.contact ul li a:hover .icon {
+color: rgb(255, 255, 255);
+transform: rotateX(360deg);
+}
+
+.contact ul li a:before {
+content: "";
+position: absolute;
+bottom: 100%;
+left: 0;
+width: 100%;
+height: 100%;
+background: #f00;
+transition: .5s;
+z-index: 2;
+}
+
+.contact ul li a:hover:before {
+bottom: 0;
+}
+
+.contact ul li:nth-child(1) a:before{
+background: #3b5999;
+}
+
+.contact ul li:nth-child(2) a:before{
+background: #55acee;
+}
+
+.contact ul li:nth-child(3) a:before {
+background: #0077b5;
+}
+
+.contact ul li:nth-child(4) a:before {
+background: #dd4b39;
 }
