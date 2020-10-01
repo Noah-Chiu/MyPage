@@ -17,7 +17,7 @@ nav {
     display: flex;
 }
 .logo {
-    margin: 0 13vh;
+    margin: 0 15vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -105,6 +105,35 @@ section {
     height: 100%;
     width: 70%;
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2em;
+
+}
+.skill {
+    height: 12em;
+    width: 12em;
+    margin: 6em;
+    background: white;
+    text-align: center;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    box-shadow: 8px 5px rgba(0, 0, 0, 0.164);
+    background-color: rgba(0, 0, 0, 0.473);
+}
+.skill > .items {
+    font-size: 1.5em;
+    color:white;
+    display: block;
+    margin: auto;
+    text-decoration: none;
 }
 footer {
     height: 8rem;
