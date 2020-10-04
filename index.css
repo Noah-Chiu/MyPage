@@ -262,7 +262,7 @@ section {
     height: 20vh;
     top: 3vh;
     border-radius: 100%;
-    background: no-repeat center/110% url(me.png);
+    background: no-repeat center/110% url(profile.png);
     animation: profile 2s ease-in-out both 0.5s;
 }
 #school { 
@@ -346,14 +346,14 @@ section {
         top: 3vh;
         left: 0;
         transform: scale(1);
-        background: no-repeat center/110% url(me.png);
+        background: no-repeat center/110% url(profile.png);
         background-color:#1c1c1e;
     }
     to {
         top: -8vh;
         left: -14vh;
         transform: scale(2);
-        background: no-repeat center/110% url(me.png);
+        background: no-repeat center/110% url(profile.png);
         background-color:#1c1c1e;
     }
 }
