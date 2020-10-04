@@ -262,7 +262,8 @@ section {
     height: 20vh;
     top: 3vh;
     border-radius: 100%;
-    animation: profile 2s ease-in-out forwards 0.5s;
+    background: no-repeat center/110% url(me.png);
+    animation: profile 2s ease-in-out both 0.5s;
 }
 #school { 
     flex-direction: column;
