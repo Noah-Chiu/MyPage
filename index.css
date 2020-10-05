@@ -1183,7 +1183,7 @@ footer .copyright p a{
         height: 10%;
         top: 85%;
     }
-    .burger:hover~.navbar{
+    .burger:checked~.navbar{
         display: block;
     }
 }
