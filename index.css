@@ -1141,6 +1141,7 @@ footer .copyright p a{
         position: absolute;
         right: 3rem;
         top: 1.5rem;
+        z-index: 3;
     }
     nav .animation{
         position: absolute;
