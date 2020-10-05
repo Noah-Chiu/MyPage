@@ -1141,7 +1141,6 @@ footer .copyright p a{
         position: absolute;
         right: 3rem;
         top: 1.5rem;
-        z-index: 3;
     }
     nav .animation{
         position: absolute;
@@ -1185,11 +1184,8 @@ footer .copyright p a{
         height: 10%;
         top: 85%;
     }
-    .burger:checked~.navbar{
+    .burger:hover~.navbar{
         display: block;
-    }
-    .logo h1{
-        top: 0;
     }
 }
 @media screen and (max-width: 620px) {
