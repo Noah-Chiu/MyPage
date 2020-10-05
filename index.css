@@ -1121,6 +1121,7 @@ footer .copyright p a{
         }
     }
     .logo {
+        width: 7rem;
         margin: auto;
     }
     .navbar {
