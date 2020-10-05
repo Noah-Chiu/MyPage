@@ -1188,6 +1188,9 @@ footer .copyright p a{
     .burger:checked~.navbar{
         display: block;
     }
+    .logo h1{
+        top: 0;
+    }
 }
 @media screen and (max-width: 620px) {
 
