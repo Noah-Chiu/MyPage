@@ -897,11 +897,8 @@ footer .copyright p a{
     }
 }
 @media screen and (max-width: 1500px) {
-    .contact ul{
-        flex-direction: column;
-    }
     .contact ul li {
-        margin: 5% 0;
+        margin: auto;
     }
     .contact ul li a{
         height: 8rem;
@@ -947,7 +944,7 @@ footer .copyright p a{
         display: flex;
         animation: none;
     }
-
+    
     #interest img {
         box-sizing: content-box;
         overflow: hidden;
@@ -967,18 +964,46 @@ footer .copyright p a{
         }
     }
 }
-@media screen and (max-width: 1360px) {
-    .contact ul{
+@media screen and (max-height: 1100px) {
+    .contact ul {
+        flex-direction: row;
+    }
+    .product {
+        height: 10em;
+        width: 10em;
+        margin: 2em;
+    }
+    .skills{
+        grid-template-columns: repeat(4,1fr);
+    }
+    .skill{
+        margin: 1.5em;
+    }
+    #school { 
         flex-direction: column;
+        text-align: center;
+        top: 15vh;
+        width: 40vh;
+        height: 30vh;
+        border-radius: 100%;
     }
-    .contact ul li {
-        margin: 5% 0;
+    @keyframes school {
+        from {
+        }
+        to {
+            top: 15vh;
+            transform: scale(1.5);
+            border-radius: 20%;
+        }
     }
-    .contact ul li a{
-        height: 8rem;
-        width: 8rem;
+    #interest {
+        height: 14vh;
+        width: 60vh;
+        border-radius: 100px;
+        overflow: hidden;
+        display: flex;
+        animation: none;
     }
-
 }
 @media screen and (max-width: 1260px) {
     .skills {
@@ -1022,6 +1047,25 @@ footer .copyright p a{
         background: no-repeat center/110% url(profile.png);
         animation: none;
     }
+}
+@media screen and (max-width: 760px) {
+    #interest {
+        height: 14vh;
+        width: 40vh;
+        border-radius: 100px;
+        overflow: hidden;
+        display: flex;
+        animation: none;
+    }
+    
+    #interest img {
+        box-sizing: content-box;
+        overflow: hidden;
+        margin: auto;
+        bottom: 13vh;
+        width:10vh;
+        animation: img 1s ease-in-out both 1.2s;
+    }
     #school { 
         flex-direction: column;
         text-align: center;
@@ -1035,35 +1079,15 @@ footer .copyright p a{
         list-style:none;
         animation: li 1s ease-in-out both 2.5s;
     }
-    #interest {
-        height: 14vh;
-        width: 40vh;
-        border-radius: 100px;
-        overflow: hidden;
-        display: flex;
-        animation: none;
+    .contact {
+        height: 100%;
     }
-
-    #interest img {
-        box-sizing: content-box;
-        overflow: hidden;
-        margin: auto;
-        bottom: 13vh;
-        width:10vh;
-        animation: img 1s ease-in-out both 1.2s;
+    .contact ul{
+        flex-direction: column;
+        height: 100%;
     }
-}
-@media screen and (max-width: 620px) {
-    .product {
-        height: 10em;
-        width: 10em;
-        margin: 1em;
-    }
-    .down:hover~.products{
-        transform: translate(0,-180vh);
-    }
-    nav {
-        display: none;
+    .contact ul li {
+        margin:1em 0;
     }
     #interest {
         height: 14vh;
@@ -1086,6 +1110,15 @@ footer .copyright p a{
             border-radius: 20%;
         }
     }
+}
+@media screen and (max-width: 620px) {
+    nav {
+        display: none;
+    }
+    .down:hover~.products{
+        transform: translate(0,-180vh);
+    }
+
 }
 
 
