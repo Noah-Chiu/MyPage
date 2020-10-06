@@ -684,12 +684,12 @@ section {
     border: 3px solid #4b6584;
 }
 
-.contact ul li a .icon {
+.contact ul li a .fab {
     color: #4b6584;
     transition: bottom .35s,color .35s .15s,transform .35s .15s;
 }
 
-.contact ul li a:hover .icon {
+.contact ul li a:hover .fab {
     color: rgb(255, 255, 255);
     transform: rotateX(360deg);
 }
@@ -717,17 +717,18 @@ section {
     background: #3b5999;
 }
 
-.contact ul li:nth-child(2) a::before{
+.contact ul li:nth-child(2) a::before {
+    background: radial-gradient(circle at 30% 107%, #FDF497 0%, #FDF397 5%,
+    #FD5949 45%, #D6249F 60%, #285AEB 90%);
+}
+.contact ul li:nth-child(3) a::before{
     background: #55acee;
 }
 
-.contact ul li:nth-child(3) a::before {
+.contact ul li:nth-child(4) a::before {
     background: #0077b5;
 }
 
-.contact ul li:nth-child(4) a::before {
-    background: #dd4b39;
-}
 
 footer {
     width: 100%;
@@ -1102,7 +1103,43 @@ footer .copyright p a{
         height: 100%;
     }
     .contact ul li {
-        margin:1em 0;
+        margin:0.7em 0;
+    }
+    .contact ul li a .fab {
+        animation: ico 0.35s linear both 0.15s;
+    }
+    .contact ul li a {
+        animation: bor 0.5s linear both;
+    }
+    .contact ul li a::before {
+        animation: iback 0.5s linear both;
+    }
+
+    @keyframes ico {
+        from{
+            color: #4b6584;
+            transform: rotateX(0);
+        }
+        to{
+            color: rgb(255, 255, 255);
+            transform: rotateX(360deg);
+        }
+    }
+    @keyframes iback {
+        from{
+            bottom: 100%;
+        }
+        to{
+            bottom: 0;
+        }
+    }
+    @keyframes bor {
+        from{
+            border-color: #4b6584;
+        }
+        to{
+            border-color:rgba(0, 0, 0, 0.25);
+        }
     }
     #interest {
         height: 14vh;
