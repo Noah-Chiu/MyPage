@@ -909,8 +909,8 @@ footer .copyright p a{
         margin: auto;
     }
     .contact ul li a{
-        height: 8rem;
-        width: 8rem;
+        height: 20vh;
+        width: 20vh;
     }
     .skills{
         grid-template-columns: repeat(2,1fr);
