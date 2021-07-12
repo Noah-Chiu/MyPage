@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="p">hello world</p>
+    <canvas id="canvas" width="500" height="500" style="border: solid 1px black;"></canvas>
+</body>
+
+<script>
+
+    var p = document.getElementById("p")
+    var t = 0
+
+
+
+    /** @type {HTMLCanvasElement} */
+    var canvas = document.getElementById("canvas")
+    var ctx = canvas.getContext('2d')
+
+
+    var x = 200
+    var y = 200
+
+
+    var dir = 0
+    var now_dir = 0
+
+    var len = 10
+
+    var body = []
+
+    var food = [40, 40]
+
+
+    console.log("hello")
+
+
+    body.push([x, y])
+
+    var run = true
+
+    var cam = [200, 200]
+    /**
+     * this function updates
+     */
+    function update() {
+
+        t++
+
+        if (t % 10 == 0) {
+
+
+            if (dir == 0) y -= 20
+            if (dir == 1) x += 20
+            if (dir == 2) y += 20
+            if (dir == 3) x -= 20
+            now_dir = dir
+
+
+            for (point of body) {
+                if (point[0] == x && point[1] == y) {
+                    run = false
+                    p.textContent = "GameOver"
+                    return
+                }
+            }
+
+            if (food[0] == x && food[1] == y) {
+                len++
+
+                food[0] = Math.floor(Math.random() * 25) * 20
+                food[1] = Math.floor(Math.random() * 25) * 20
+            }
+            body.push([x, y])
+            while (body.length > len) body.shift()
+
+
+        }
+
+
+        cam[0] += (x - cam[0]) * 0.2
+        cam[1] += (y - cam[1]) * 0.2
+
+
+
+     ctx.clearRect(0, 0, 500, 500)
+     ctx.save()
+     ctx.translate(250 - cam[0], 250 - cam[1])
+
+        p.textContent = t
+     ctx.fillStyle = 'black'
+        for (point of body) {
+         ctx.fillRect(...point, 20, 20)
+        }
+     ctx.fillStyle = 'red'
+     ctx.fillRect(...food, 20, 20)
+     ctx.restore()
+
+        if (run)
+            setTimeout(() => {
+                update()
+            }, 16)
+    }
+
+    update()
+
+
+
+    function OnKeyDown(e) {
+        var old_dir = now_dir
+        if (e.key == "ArrowUp") dir = 0
+        if (e.key == "ArrowRight") dir = 1
+        if (e.key == "ArrowDown") dir = 2
+        if (e.key == "ArrowLeft") dir = 3
+        if ((dir - old_dir + 4) % 4 == 2) dir = old_dir
+    }
+
+    window.addEventListener("keydown", OnKeyDown)
+
+</script>
+
+</html>
